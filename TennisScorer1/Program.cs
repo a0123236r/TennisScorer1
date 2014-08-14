@@ -23,7 +23,121 @@ namespace TennisScorer1
         static void DisplayScore(int a, int b)
         {
             //Modify this method - use ifs and switches based on the value of a and b
-            Console.WriteLine("____");
+            if (a == b)
+                switch (a)
+                {
+                    case 0:
+                        Console.WriteLine("Love all");
+                        break;
+                    case 1:
+                        Console.WriteLine("15 all");
+                        break;
+                    case 2:
+                        Console.WriteLine("30 all");
+                        break;
+                    default:
+                        Console.WriteLine("Deuce");
+                        break;
+                }
+            if (a == 5 && b <= 2)
+                Console.WriteLine("N/A");
+            if (b == 5 && a <= 2)
+                Console.WriteLine("N/A");
+            if (a == 4 && b <= 2)
+                Console.WriteLine("Game A");
+            if (a == 3 && b == 5)
+                Console.WriteLine("Game A");
+            if (b == 4 && a <= 2)
+                Console.WriteLine("Game B");
+            if (a == 5 && b == 3)
+                Console.WriteLine("Game B");
+            if (a == 0)
+            {
+                switch (b)
+                {
+                    case 1:
+                        Console.WriteLine("Love-15");
+                        break;
+                    case 2:
+                        Console.WriteLine("Love-30");
+                        break;
+                    case 3:
+                        Console.WriteLine("Love-40");
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (a == 1)
+            {
+                switch (b)
+                {
+                    case 0:
+                        Console.WriteLine("15-Love");
+                        break;
+                    case 2:
+                        Console.WriteLine("15-30");
+                        break;
+                    case 3:
+                        Console.WriteLine("15-40");
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (a == 2)
+            {
+                switch (b)
+                {
+                    case 0:
+                        Console.WriteLine("30-Love");
+                        break;
+                    case 1:
+                        Console.WriteLine("30-15");
+                        break;
+                    case 3:
+                        Console.WriteLine("30-40");
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (a == 3)
+            {
+                switch (b)
+                {
+                    case 0:
+                        Console.WriteLine("30-Love");
+                        break;
+                    case 1:
+                        Console.WriteLine("40-15");
+                        break;
+                    case 2:
+                        Console.WriteLine("40-30");
+                        break;
+                    case 4:
+                        Console.WriteLine("Advantage B");
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (a == 4)
+            {
+                switch (b)
+                {
+                    case 3:
+                        Console.WriteLine("Advantage A");
+                        break;
+                    case 5:
+                        Console.WriteLine("Advantage B");
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (a == 5 && b == 4)
+                Console.WriteLine("Advantage A");
         }
     }
 }
